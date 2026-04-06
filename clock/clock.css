@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(56, 89, 69);
+    color: rgb(219, 219, 219);
+}
+
+
+.time-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+#time{
+    font-size: 16vw;
+    padding: 3rem;
+    border: 8px solid white;
+    font-weight: bold
+}
+
+.date-container{
+
+    padding: 2rem;
+    font-size: 2vw;
+
+}
+

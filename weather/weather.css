@@ -1,0 +1,147 @@
+.container{
+    max-width: 80%;
+    margin: 2em auto;
+    border: 4px solid rgb(222,222,222);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: -2px 2px 4px rgb(222,222,222);
+    display: flex;
+    background-color: rgb(56, 89, 69);
+    color: rgb(222,222,222)
+}
+
+#search{
+    flex-grow: 2;
+    padding: 8px;
+    margin: 0 4px 0 2px;
+    font-size: larger;
+
+}
+input {
+    outline: none;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+input:focus{
+    border: 2px solid rgb(222,222,222)
+}
+
+.submit-button{
+    padding: 8px 24px;
+    outline: none;
+    box-shadow: -2px 4px 4px rgb(32, 32, 32);
+    color: rgb(32,32,32);
+    cursor: pointer;
+}
+
+.submit-button:active{
+    box-shadow: none;
+}
+
+.weather-results{
+    opacity:0;
+    transform: translateY(20px);
+    
+    transition-property: opacity,transform; /* which property to animate */
+    transition-duration: 0.5s, 0.5s ; /* how long each animation takes*/
+    transition-timing-function: ease-in, ease-in; /* spped curve of the transition - options: ease-in, linear, ease-out, ease-in-out etc */
+    transition-delay: 0s, 0s; /* wait beofre starting*/
+
+    /* shorthand */
+    /* transition: property duration timing-function delay */
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.weather-results.visible{
+    opacity:1;
+    transform: translateY(0);
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+
+.weather-pic{
+    max-width: 300px;
+    aspect-ratio: 1/1;
+
+}
+
+.weather-svg{
+    filter: brightness(1) invert(0.85) /* trick to turn svg white */ drop-shadow(2px 2px 4px rgb(12, 12, 12) ); /* x y blur color */
+    width: 100%;
+    object-fit: contain; /* scale image to fit without crop */
+}
+
+#now-stats{
+    text-align: center;
+    margin: 24px 0px 0px 0px;
+    font-size: xx-large;
+}
+
+.divider{
+    border: 2px solid rgb(124, 134, 128);
+    border-radius: 10px;
+    margin-left: 16px;
+
+}
+
+.right{
+    flex-grow: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column-info{
+    display: flex;
+    flex-direction: column;
+    max-width: 80px;
+    text-align: center;
+    gap:40px;
+    font-size: large;
+}
+
+#forecast-right{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+
+
+.displaySun{
+    background-color: rgb(124, 134, 128);
+    border: 4px solid rgb(141, 141, 141);
+    box-shadow: inset 4px 4px 2px rgb(54, 54, 54) ;
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 10px;
+}
+
+#sun{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+#displayDate{
+padding: 8px 32px 0px 32px;
+}
+
+#sun *{
+    margin:8px 16px 0px 16px;}
+
+.sun{
+    max-width: 50px;
+}

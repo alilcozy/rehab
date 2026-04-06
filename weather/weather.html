@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="weather.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet" />
+
+    <script src="weather.js"></script>
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2 class="back"><a href="../index.html">Back</a></h2>
+    </div>
+    <div class="container">
+        <input type="text" name="city" id="search" placeholder="Enter your city...">
+        <input type="submit" value="Go" onclick="getWeatherInfo()" class="submit-button">
+    </div>
+    <div class="container weather-results" id="weather-results">
+        <div class="left">
+            <div class="weather-pic">
+                <img src="" alt="Image of Weather" id="weather-svg" class="weather-svg">
+            </div>
+            <div id="now-stats">
+
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="right">
+            <div id="forecast-right"></div>
+            <div class="displaySun">
+                <div id="displayDate"></div>
+                <div id="sun">
+                    <div id="sunrise">
+                        <img src="./svgs/sunrise.svg" alt="" class = "weather-svg sun">
+                        <div id="sunriseText"></div>
+                    </div>
+                    <div class = "sunText">
+                         Carpe Diem
+                    </div>
+                    <div id="sunset">
+                        <img src="./svgs/sunset.svg" alt="" class = "weather-svg sun">
+                        <div id="sunsetText"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

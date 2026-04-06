@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="calculator.css" />
+    <script src="./calculator.js"></script>
+</head>
+
+<body onload="load()">
+    <div class="header">
+        <h2 class="back"><a href="../index.html">Back</a></h2>
+    </div>
+    <div class="grid-wrap">
+        <div class="grid">
+            <div class="click grid-pad-screen screen" >
+                <div class="screen-inside" id="screen">0</div>
+            </div>
+            <div class="click grid-pad-c grid-pad" onclick="resetScreen()">
+                <div class="calc-button sec-color">C</div>
+            </div>
+            <div class="click grid-pad-plus grid-pad" onclick="pushItem(' + ')">
+                <div class="calc-button">+</div>
+            </div>
+            <div class="click grid-pad-minus grid-pad" onclick="pushItem(' - ')">
+                <div class="calc-button">-</div>
+            </div>
+            <div class="click grid-pad-times grid-pad" onclick="pushItem(' * ')">
+                <div class="calc-button">x</div>
+            </div>
+            <div class="click grid-pad-divide grid-pad" onclick="pushItem(' / ')">
+                <div class="calc-button">&#x00F7</div>
+            </div>
+
+            <div class="click grid-pad-1 grid-pad" onclick="pushItem('1')">
+                <div class="calc-button">1</div>
+            </div>
+            <div class="click grid-pad-2 grid-pad" onclick="pushItem('2')">
+                <div class="calc-button">2</div>
+            </div>
+            <div class="click grid-pad-3 grid-pad" onclick="pushItem('3')">
+                <div class="calc-button">3</div>
+            </div>
+            <div class="click grid-pad-4 grid-pad" onclick="pushItem('4')">
+                <div class="calc-button">4</div>
+            </div>
+            <div class="click grid-pad-5 grid-pad" onclick="pushItem('5')">
+                <div class="calc-button">5</div>
+            </div>
+            <div class="click grid-pad-6 grid-pad" onclick="pushItem('6')">
+                <div class="calc-button">6</div>
+            </div>
+            <div class="click grid-pad-7 grid-pad" onclick="pushItem('7')">
+                <div class="calc-button">7</div>
+            </div>
+            <div class="click grid-pad-8 grid-pad" onclick="pushItem('8')">
+                <div class="calc-button">8</div>
+            </div>
+            <div class="click grid-pad-9 grid-pad" onclick="pushItem('9')">
+                <div class="calc-button">9</div>
+            </div>
+            <div class="click grid-pad-dot grid-pad" onclick="pushItem('.')">
+                <div class="calc-button">.</div>
+            </div>
+            <div class="click grid-pad-0 grid-pad" onclick="pushItem('0')">
+                <div class="calc-button">0</div>
+            </div>
+            <div class="click grid-pad-equal grid-pad" onclick="calculate()">
+                <div class="calc-button equal">=</div>
+            </div>
+            <div class="click grid-pad-blank-1 grid-pad" onclick="explode()">
+                <div class="calc-button red-button">Do not</div>
+            </div>
+            <div class="click grid-pad-blank-2 grid-pad"></div>
+            <div class="grid-image">
+                <img src="./exploding-cat.gif" alt="" hidden id="cat"/>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
